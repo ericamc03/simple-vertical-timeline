@@ -1,0 +1,219 @@
+  
+  .program-timeline {
+    border: 1px solid #C5050C;
+    position: relative;
+  }
+
+  /* Vertical line */
+  .program-timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #adadad;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+  
+  
+  /* ********************************* */
+  /* ALL EVENTS */
+  .timeline-event {
+      /* border: 1px dashed #004C77; */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* align-items: start; */
+      margin: 0;
+      column-gap: 3rem;
+      min-height: 1.25rem;
+      /* position: relative; */
+  }
+
+  .timeline-event h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      justify-self: end;
+      /* border-right: 2px solid #adadad; */
+      margin: 0;
+      padding: 1rem;
+  }
+
+  .timeline-event .event-detail {
+      line-height: 1.2rem;
+  }
+
+  .timeline-event p {
+    margin-bottom: 0.5rem;
+  }
+
+
+  /* Symbol for each event – default styles are for months with breaks */
+  .timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 49%;
+    background-color: white;
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @media only screen and (min-width: 650px){
+    .timeline-event::after {
+      left: 50%;
+    }
+  }
+
+  /* .month {
+      justify-self: end;
+  } */
+  /* ********************************* */
+
+
+  /* ********************************* */
+  /* EVENT TYPES */
+
+  /* Residencies */
+  .residency-title {
+      color: #004C77;
+      font-weight: 600;
+  }
+
+  .residency::after {
+    background-color: #004C77;
+    border: none;
+  }
+
+  /* Modules */
+  .module-title {
+      color: #C5050C;
+      font-weight: 600;
+  }
+
+  .module::after {
+    background-color: #C5050C;
+    border: none;
+  }
+
+  /* Breaks & Event Notes */
+  .break p, .note {
+      font-style: italic;
+  }
+
+  .note {
+      font-size: 0.85rem;
+      line-height: 1rem;
+      color: #646569; /* dark gray */
+  }
+
+
+  /* No event */
+  .no-event::after {
+    height: 2px;
+    width: 14px;
+    border: 1px solid #adadad;
+    border-radius: 0;
+    z-index: 1;
+  }
+
+  /* ********************************* */
+  
+  
+
+
+
+  /* CODE FROM W3Schools EXAMPLE */
+  /* .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 3rem auto;
+    border: 1px solid black;
+  } */
+  
+  /* The vertical line */
+  /* .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  } */
+  
+  /* Container around content */
+  /* .container, .timeline-event {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .month, .event-detail {
+      position: relative;
+  } */
+  
+  /* The circles on the timeline */
+  /* .container::after, .timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  } */
+  
+  /* Place the container to the left */
+  /* .left, .month {
+    left: 0;
+  } */
+  
+  /* Place the container to the right */
+  /* .right, .event-detail {
+    left: 50%;
+  } */
+  
+  /* Fix the circle for containers on the right side */
+  /* .right::after {
+    left: -16px;
+  } */
+  
+  /* The actual content */
+  /* .content {
+    padding: 20px 30px;
+    background-color: lightblue;
+    position: relative;
+    border-radius: 6px;
+  } */
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  /* @media screen and (max-width: 600px) { */
+    /* Place the timelime to the left */
+    /* .timeline::after {
+    left: 31px;
+    } */
+    
+    /* Full-width containers */
+    /* .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    } */
+  
+    /* Make sure all circles are at the same spot */
+    /* .left::after, .right::after {
+    left: 15px;
+    } */
+    
+    /* Make all right containers behave like the left ones */
+    /* .right {
+    left: 0%;
+    }
+  } */

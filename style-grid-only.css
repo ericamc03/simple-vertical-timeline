@@ -1,0 +1,143 @@
+  
+/* FOR LOCAL CODE ONLY */
+
+.container {
+  margin-top: 5rem;
+}
+/* ********************************* */
+
+  
+  
+
+
+  .program-timeline-container {
+    display: grid;
+    grid-template-columns: 1fr 40px 2fr;
+
+    /* Styles for vertical line */
+    background-image: linear-gradient(#adadad, #adadad);
+    background-size: 2px 93.5%;
+    background-repeat: no-repeat;
+    background-position: 134px center;
+  }
+  
+  @media only screen and (min-width: 380px) {
+    .program-timeline-container {
+      background-position: calc(33.33% + 6px) center;
+      background-size: 2px 93.4%;
+    }
+  }
+  
+  
+  /* ********************************* */
+  /* ALL EVENTS */
+
+  .program-timeline-container h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      justify-self: end;
+      margin: 0;
+      padding: 1rem;
+      color: #282728;
+  }
+
+  .program-timeline-container h3.sr-only {
+    font-size: 0rem;
+    padding: 0rem;
+  }
+
+  .event-detail {
+      line-height: 1.2rem;
+      padding: 1rem;
+  }
+
+  .program-timeline-container p {
+    margin-bottom: 0.5rem;
+  }
+
+
+  /* Symbol for each event */
+  .symbol {
+    grid-column-start: 2;
+    min-height: 1.25rem;
+    position: relative;
+    padding-top: 1.25rem; /* positions symbol in line with month */
+  }
+  
+  .symbol.no-event {
+    padding-top: 0;
+  }
+
+  .symbol::after { 
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: calc(49% - 6px);
+    border-radius: 50%;
+    z-index: 1;
+    /* default styles are for months with breaks */
+    background-color: white;
+    border: 2px solid #adadad;
+    
+  }
+
+  .month {
+      justify-self: end;
+      grid-column-start: 1;
+  }
+  /* ********************************* */
+
+
+  /* ********************************* */
+  /* EVENT TYPES */
+
+  /* Residencies */
+  .residency-title {
+      color: #004C77;
+      font-weight: 600;
+  }
+
+  .residency::after {
+    background-color: #004C77;
+    border: none;
+  }
+
+  /* Modules */
+  .module-title {
+      color: #C5050C;
+      font-weight: 600;
+  }
+
+  .module::after {
+    background-color: #C5050C;
+    border: none;
+  }
+
+  /* Breaks & Event Notes */
+  p.break, .note {
+      font-style: italic;
+  }
+
+  .note {
+      font-size: 0.85rem;
+      line-height: 1rem;
+      color: #646569; /* dark gray */
+  }
+
+
+  /* No event */
+  .no-event::after {
+    height: 2px;
+    width: 12px;
+    border: 1px solid #adadad;
+    border-radius: 0;
+    z-index: 1;
+  }
+
+  /* Program end */
+  .end::after {
+    background-color: #adadad;
+  }
+
+  /* ********************************* */
