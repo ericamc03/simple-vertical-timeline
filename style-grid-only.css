@@ -32,7 +32,7 @@
   /* ********************************* */
   /* ALL EVENTS */
 
-  .program-timeline-container h3 {
+  .program-timeline-container h4 {
       font-size: 1rem;
       font-weight: bold;
       justify-self: end;
@@ -41,7 +41,7 @@
       color: #282728;
   }
 
-  .program-timeline-container h3.sr-only {
+  .program-timeline-container h4.sr-only {
     font-size: 0rem;
     padding: 0rem;
   }
